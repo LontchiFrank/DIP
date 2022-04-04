@@ -9,8 +9,6 @@
 // import "./App.css";
 // import Navigation from "./Navigation";
 // // import "bootstrap/dist/css/bootstrap.min.css";
-// import { Provider } from "react-redux";
-// import store from "./redux/store";
 
 // function App() {
 //   return (
@@ -27,9 +25,15 @@
 // export default App;
 
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <Provider store={store}>
+      <h1>ak</h1>
+    </Provider>
+  );
 }
 
 export default App;
