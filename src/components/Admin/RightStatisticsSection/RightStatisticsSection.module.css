@@ -1,0 +1,89 @@
+.container {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  padding: 14px 22px;
+  border-left: 1px solid #dedede;
+  width: 325px;
+}
+
+.imgContainer {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.smallView {
+  display: none;
+}
+.overViewC0ntainer {
+  flex: 1;
+  margin-top: 45px;
+}
+.overViewC0ntainer p:first-child {
+  color: #747474;
+  font-weight: bold;
+}
+
+.totalBooks {
+  background-color: var(--light-pink);
+}
+.totalViews {
+  background-color: var(--light-blue);
+}
+.total {
+  border-radius: 18px;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.totalContainer {
+  flex: 1;
+}
+
+.main {
+  background-color: #f1f1f1;
+  border-radius: 7px;
+  height: 7px;
+}
+
+.stats {
+  font-size: 13px;
+}
+
+@media (max-width: 1142px) {
+  .container {
+    width: 225px;
+  }
+  .total {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 943px) {
+  .container {
+    width: 180px;
+  }
+  .total {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 943px) {
+  .container {
+    display: none;
+  }
+  .smallView {
+    height: 100vh;
+    padding: 35px 22px;
+    width: 125px;
+    /* display: block; */
+  }
+}

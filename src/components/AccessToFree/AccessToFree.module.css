@@ -1,0 +1,23 @@
+.all {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.flow {
+  width: 100%;
+}
+@media (min-width: 268px) and (max-width: 790.98px) {
+  .flow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (min-width: 791px) and (max-width: 2750px) {
+  .flow {
+    display: flex;
+  }
+}

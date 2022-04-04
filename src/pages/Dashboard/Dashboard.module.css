@@ -1,0 +1,53 @@
+.containers {
+  width: 100%;
+  background-image: url(../../../public/6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main1 {
+  width: 100%;
+  min-height: 100vh;
+  gap: 3em;
+}
+.mheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) and (max-width: 990.98px) {
+  .whole {
+    width: 90%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+        flex-direction: column; */
+  }
+  .box2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1248px) {
+  .whole {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: flex;
+          flex-direction: column; */
+  }
+  .box1 {
+    width: 100%;
+  }
+  .box2 {
+    width: 100%;
+  }
+}

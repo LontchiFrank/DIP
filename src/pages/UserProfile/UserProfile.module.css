@@ -1,0 +1,19 @@
+.profilePic {
+  width: 100%;
+  height: 90%;
+}
+.round {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.takephoto {
+  width: 100%;
+  height: 20vh;
+}
+.profileBody {
+  width: 100vw;
+  height: 90vh;
+}

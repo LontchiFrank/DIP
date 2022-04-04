@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+  background-color: var(--panel_bckg);
+  padding: 7px 12px;
+  position: fixed;
+  width: 70px;
+}
+
+.iconContainer {
+  height: 245px;
+}
+
+.isActive {
+  color: var(--black);
+  font-size: 22px;
+}
+
+.notActive {
+  color: var(--secondary);
+}
+
+.logout {
+  color: var(--primary);
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: none;
+  }
+}

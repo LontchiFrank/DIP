@@ -1,0 +1,95 @@
+.colorContainer {
+  background-color: var(--purple);
+  width: 7px;
+}
+.colorContainerPremium {
+  background-color: var(--yellow);
+  width: 7px;
+}
+.line {
+  width: 1px;
+  background-color: var(--secondary);
+  height: 70%;
+  margin-left: 12px;
+}
+.eyeIcon {
+  transition: 1s all;
+}
+.eyeIconFree {
+  transition: 1s all;
+  color: #000;
+}
+.eyeIconFree:hover {
+  color: var(--green);
+  cursor: pointer;
+}
+.eyeIcon:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.round {
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #dad104;
+  margin-right: 7px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  transition: 1s transform;
+}
+
+.card:hover {
+  transform: translateX(30px);
+}
+.bookContainer {
+  width: 225px;
+}
+.txt {
+  font-size: 11px;
+}
+.usersPlan {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.txtContainer {
+  font-size: 14px;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.email {
+  font-size: 10px;
+  color: var(--secondary);
+}
+
+.pendingContianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #dad104;
+}
+
+@media (max-width: 943px) {
+  .mainCOntainer,
+  .usersPlan,
+  .txt,
+  .txtContainer,
+  .pendingContianer {
+    font-size: 10px;
+  }
+
+  .card:hover {
+    transform: translateX(10px);
+  }
+}
