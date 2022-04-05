@@ -27,6 +27,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import { Provider } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
 import store from "./redux/store";
 
 function App() {
