@@ -25,14 +25,15 @@
 // export default App;
 
 import React from "react";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 function App() {
   return (
     <Provider store={store}>
-      <Navigation />
+      {/* <Navigation /> */}
+      <h1>Hello</h1>
     </Provider>
   );
 }
