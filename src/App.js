@@ -25,6 +25,7 @@
 // export default App;
 
 import React from "react";
+import "./App.css";
 import Navigation from "./Navigation";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
