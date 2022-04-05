@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+@import "~mdb-ui-kit/css/mdb.min.css";
+
+:root {
+  --primary: #005faf;
+  --secondary: #b4b4b4;
+  --primart_dark_violet: hsl(257, 27%, 26%);
+  --black: #000;
+  --purple: #842287;
+  --yellow: #f7ad00;
+  --green: #41a504;
+  --red: rgba(167, 18, 18, 0.71);
+  --white: #fff;
+  --primary-cyan: rgba(0, 95, 176, 0.7);
+  --white: #fff;
+  --light-pink: #efe3ff;
+  --light-blue: #e5fcff;
+  --panel_bckg: #e4e4e4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerColumn {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.containerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerCenter {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.icon:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  border: 3px solid white;
+  animation: spin 0.7s linear infinite;
+  border-bottom-color: rgb(29, 158, 46);
+}
+
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+.spinnerContainer {
+  height: 50vh;
+  flex: 1;
+}
+.dropdown-menu li {
+  position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
 }
