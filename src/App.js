@@ -32,8 +32,8 @@ import store from "./redux/store";
 function App() {
   return (
     <Provider store={store}>
-      <Navigation />
-      {/* <h1>Hello</h1> */}
+      {/* <Navigation /> */}
+      <h1>Hello</h1>
     </Provider>
   );
 }
