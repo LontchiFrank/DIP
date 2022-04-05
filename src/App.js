@@ -25,7 +25,7 @@
 // export default App;
 
 import React from "react";
-// import Navigation from "./Navigation";
+import Navigation from "./Navigation";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
