@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./TaskCard.module.css";
 import { Avater } from "../../../components";
 import { Button, Modal } from "react-bootstrap";
+import defot1 from "../../../assets/defaultBook.png";
 import { _viewAllTasks, _deleteBook } from "../../../Helpers/adminHelper";
 import moment from "moment";
 import { Link } from "react-router-dom";
@@ -77,11 +78,9 @@ function TaskCard({ book }) {
           containerCenter
           className={` ${styles.bookContainer}  `}
         >
-          {/* <div>
-            <Avater
-              imageUrl={book.coverPage ? book.coverPage : "/defaultBook.png"}
-            />
-          </div> */}
+          <div>
+            <Avater imageUrl={book.coverPage ? book.coverPage : defot1} />
+          </div>
           <div className={styles.txtContainer}>
             {book.name} <br />
             <span className={styles.email}> {book.author}</span>

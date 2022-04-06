@@ -5,6 +5,8 @@ import { NavDropdown } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { LOGOUT } from "../../redux/ActionType";
 import Header1 from "../Admin/Header/Header1";
+import prof from "../../assets/defaultUserPic.webp";
+
 import {
   booksFilteredList,
   loadLottieAnnimation,
@@ -188,7 +190,7 @@ function MyFree({ children }) {
                     src={
                       user.user && user.user.avater !== ""
                         ? user.user.avater
-                        : "/defaultUserPic.webp"
+                        : prof
                     }
                     alt=""
                     style={{

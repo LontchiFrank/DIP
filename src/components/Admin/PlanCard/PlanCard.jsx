@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./PlanCard.module.css";
+import tick from "../../../assets/Group.png";
+import defot from "../../../assets/Default-avatar.jpg";
 import { Avater } from "../../../components";
 import moment from "moment";
 
 function PlanCard({ user }) {
+  console.log(user.avater);
+
   return (
     <div>
       <div className={styles.card}>
@@ -33,11 +37,7 @@ function PlanCard({ user }) {
         </div>
         <div className={`containerCenter ${styles.userInfoContainer}`}>
           <div>
-            <Avater
-              imageUrl={
-                user.avater.length < 1 ? "/Default-avatar.jpg" : user.avater
-              }
-            />
+            <Avater imageUrl={user.avater.length < 1 ? defot : user.avater} />
           </div>
           <div className={styles.txtContainer}>
             {user.name} <br />
@@ -59,7 +59,7 @@ function PlanCard({ user }) {
           </div>
         </div>
         <div className={` containerCenter ${styles.imgContainer}`}>
-          <img src="/Group.png" alt="tick-icon" />
+          <img src={tick} alt="tick-icon" />
         </div>
       </div>
     </div>

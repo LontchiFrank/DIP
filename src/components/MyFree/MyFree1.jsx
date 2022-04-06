@@ -13,6 +13,7 @@ import {
   freeBooksFilteredList,
   loadLottieAnnimation,
 } from "../../redux/actions/adminAction";
+import pros from "../../assets/defaultUserPic.webp";
 
 function MyFree1({ children }) {
   const user = useSelector((state) => state.user);
@@ -161,9 +162,7 @@ function MyFree1({ children }) {
                   {" "}
                   <img
                     src={
-                      user.user && user.user.avater !== ""
-                        ? user.avater
-                        : "/defaultUserPic.webp"
+                      user.user && user.user.avater !== "" ? user.avater : pros
                     }
                     alt=""
                     style={{

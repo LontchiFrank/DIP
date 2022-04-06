@@ -4,6 +4,7 @@ import styles from "../pages/Dashboard/Dashboard.module.css";
 import { logout } from "../redux/actions/userAction";
 import { LOGOUT } from "../redux/ActionType";
 import { useSelector, useDispatch } from "react-redux";
+import pros from "../assets/defaultUserPic.webp";
 
 function DashPage({ children }) {
   const user = useSelector((state) => state.user);
@@ -104,7 +105,7 @@ function DashPage({ children }) {
                     src={
                       user.user && user.user.avater !== ""
                         ? user.user.avater
-                        : "/defaultUserPic.webp"
+                        : pros
                     }
                     alt=""
                     style={{

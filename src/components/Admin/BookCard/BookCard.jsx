@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./BookCard.module.css";
 import { Avater } from "../../../components";
 import { Button, Modal } from "react-bootstrap";
+import defot1 from "../../../assets/defaultBook.png";
 import { _viewAllBooks, _deleteBook } from "../../../Helpers/adminHelper";
 import moment from "moment";
 import { Link } from "react-router-dom";
@@ -79,11 +80,7 @@ function BookCard({ book }) {
               className={` ${styles.bookContainer}  `}
             >
               <div>
-                <Avater
-                  imageUrl={
-                    book.coverPage ? book.coverPage : "/defaultBook.png"
-                  }
-                />
+                <Avater imageUrl={book.coverPage ? book.coverPage : defot1} />
               </div>
               <div className={styles.txtContainer}>
                 {book.name} <br />
@@ -194,11 +191,7 @@ function BookCard({ book }) {
               className={` ${styles.bookContainer}  `}
             >
               <div>
-                <Avater
-                  imageUrl={
-                    book.coverPage ? book.coverPage : "/defaultBook.png"
-                  }
-                />
+                <Avater imageUrl={book.coverPage ? book.coverPage : defot1} />
               </div>
               <div className={styles.txtContainer}>
                 {book.name} <br />
