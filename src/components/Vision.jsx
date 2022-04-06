@@ -1,6 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-
+import viss from "../assets/vis.jpg";
 import styles from "../pages/Home/Home.module.css";
 
 function Vision() {
@@ -34,7 +34,7 @@ function Vision() {
           <div className="col-lg-6 col-md-12 p-0">
             <div className="hold">
               <img
-                src="/vis.jpg"
+                src={viss}
                 alt=""
                 style={{ width: "100%", height: "100%", borderRadius: "5px" }}
               />

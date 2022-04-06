@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import styles from "./Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import "./Home.css";
+import land from "../../assets/a.png";
 // import Network from "../../components/Network/Network";
 import Team from "../../components/Team/Team";
 import Ranks from "../../components/Ranks/Ranks";
@@ -84,7 +85,7 @@ function Home() {
             <Fade bottom>
               <div className="hold">
                 <img
-                  src="/a.png"
+                  src={land}
                   alt=""
                   style={{ width: "100%", height: "100%" }}
                 />

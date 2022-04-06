@@ -1,5 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import first from "../../assets/dip1.jpg";
+import second from "../../assets/dip2.jpg";
+import third from "../../assets/tim.jpeg";
 import styles from "./Team.module.css";
 function Team() {
   return (
@@ -21,7 +24,7 @@ function Team() {
               justifyContent: "center",
             }}
           >
-            <img className="d-block w-100" src="/dip1.jpg" alt="First slide" />
+            <img className="d-block w-100" src={first} alt="First slide" />
           </div>
           <Carousel.Caption>
             <h1 style={{ fontWeight: "bold" }}>Team</h1>
@@ -46,7 +49,7 @@ function Team() {
               justifyContent: "center",
             }}
           >
-            <img className="d-block w-100" src="/dip2.jpg" alt="Second slide" />
+            <img className="d-block w-100" src={second} alt="Second slide" />
           </div>
 
           <Carousel.Caption>
@@ -75,7 +78,7 @@ function Team() {
             }}
           >
             {" "}
-            <img className="d-block w-100" src="/tim.jpeg" alt="Third slide" />
+            <img className="d-block w-100" src={third} alt="Third slide" />
           </div>
 
           <Carousel.Caption>

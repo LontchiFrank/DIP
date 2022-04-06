@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import styles from "../pages/Home/Home.module.css";
-// import "../pages/Home/Home.css";
+import miss from "../assets/mis.jpg";
 function Mission() {
   return (
     <div
@@ -22,7 +22,7 @@ function Mission() {
             <div className="col-lg-6 col-md-12 p-0">
               <div className="hold d-flex justify-content-center align-items-center">
                 <img
-                  src="/mis.jpg"
+                  src={miss}
                   alt=""
                   style={{
                     width: "90%",
