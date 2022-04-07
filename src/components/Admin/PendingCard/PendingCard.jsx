@@ -86,8 +86,9 @@ function PendingCard({ user }) {
             Accept
           </div>
           <div
+            style={{ marginLeft: "16px" }}
             onClick={handleShow}
-            className={`btn btn-danger mr-3 ${styles.buttons} `}
+            className={`btn btn-danger ml-3 ${styles.buttons} `}
           >
             Decline
           </div>
