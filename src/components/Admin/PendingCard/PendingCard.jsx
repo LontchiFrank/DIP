@@ -8,6 +8,8 @@ import {
 } from "../../../Helpers/adminHelper";
 import { useDispatch } from "react-redux";
 import moment from "moment";
+import defot from "../../../assets/Default-avatar.jpg";
+
 function PendingCard({ user }) {
   const [show, setShow] = useState(false);
   const [showAceptModal, setshowAceptModal] = useState(false);
@@ -55,11 +57,7 @@ function PendingCard({ user }) {
         </div>
         <div className={`containerCenter ${styles.userInfoContainer}`}>
           <div>
-            <Avater
-              imageUrl={
-                user.avater.length < 1 ? "/Default-avatar.jpg" : user.avater
-              }
-            />
+            <Avater imageUrl={user.avater.length < 1 ? defot : user.avater} />
           </div>
           <div className={styles.txtContainer}>
             {user.name} <br />
