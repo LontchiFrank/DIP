@@ -68,41 +68,41 @@ function FetchUses() {
   }, [usersFilteredList]);
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       {loading ? (
         <div className={`containerCenter spinnerContainer`}>
           <div className="spinner"></div>
         </div>
       ) : (
-        <div>
+        <div style={{ width: "100%" }}>
           {users.length > 0 || incomingUsersRequest.length > 0 ? (
-            <div>
+            <div style={{ width: "100%" }}>
               {usersFilteredList.length > 0 ? (
-                <div>
-                  <div>
+                <div style={{ width: "100%" }}>
+                  <div style={{ width: "100%" }}>
                     {pendinDataSet.length > 0 &&
                       pendinDataSet.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PendingCard user={user} index={index} />
                         </div>
                       ))}
                   </div>
                   <div></div>
-                  <div>
+                  <div style={{ width: "100%" }}>
                     {usersFilteredList.map((user, index) => (
-                      <div key={index}>
+                      <div style={{ width: "100%" }} key={index}>
                         <PlanCard user={user} />
                       </div>
                     ))}
                   </div>
                 </div>
               ) : (
-                <div>
-                  <div>
+                <div style={{ width: "100%" }}>
+                  <div style={{ width: "100%" }}>
                     {typeof incomingUsersRequest !== undefined &&
                       incomingUsersRequest.length > 0 &&
                       incomingUsersRequest.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PendingCard user={user} index={index} />
                         </div>
                       ))}
@@ -111,7 +111,7 @@ function FetchUses() {
                     {typeof users !== undefined &&
                       users.length > 0 &&
                       users.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PlanCard user={user} />
                         </div>
                       ))}

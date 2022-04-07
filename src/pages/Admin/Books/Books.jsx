@@ -33,19 +33,19 @@ function Books() {
       {error != null ? (
         <Unexpected />
       ) : (
-        <div>
+        <div style={{ width: "100%" }}>
           {loading ? (
             <div className={`containerCenter spinnerContainer`}>
               <div className="spinner"></div>
             </div>
           ) : (
-            <div>
+            <div style={{ width: "100%" }}>
               {allBooks.length > 0 ? (
-                <div>
+                <div style={{ width: "100%" }}>
                   {booksFilteredList.length > 0 ? (
-                    <div>
+                    <div style={{ width: "100%" }}>
                       {booksFilteredList.map((book, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <BookCard book={book} index={index} />
                         </div>
                       ))}
@@ -53,7 +53,7 @@ function Books() {
                   ) : (
                     <div>
                       {allBooks.map((book, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <BookCard book={book} index={index} />
                         </div>
                       ))}

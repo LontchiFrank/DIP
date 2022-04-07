@@ -10,6 +10,7 @@ import {
 import { loadUser, updatedUserInfo } from "../../redux/actions/userAction";
 import animationData from "../../annimations/5449-success-tick.json";
 import Lottie from "react-lottie";
+import log1 from "../../assets/defaultUserPic.webp";
 
 const defaultOptions = {
   loop: true,
@@ -112,7 +113,7 @@ function UserProfile() {
                             ? URL.createObjectURL(selectedImage)
                             : user && user.user && user.user.avater
                             ? user.user.avater
-                            : "/defaultUserPic.webp"
+                            : log1
                         }
                         className="img-fluid rounded border card"
                         style={{ width: "100%", height: "100%" }}

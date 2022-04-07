@@ -7,6 +7,7 @@ import {
   booksFilteredList,
 } from "../../../redux/actions/adminAction";
 import { useDispatch } from "react-redux";
+import { logout } from "../../../redux/actions/adminAction";
 
 function Header({ hidden, title, filtrationList, from }) {
   const [searchValue, setSearchValue] = useState("");
@@ -99,6 +100,9 @@ function Header({ hidden, title, filtrationList, from }) {
   const handleDropdown = () => {
     setMenu(!menu);
   };
+  const onLogout = () => {
+    dispatch(logout());
+  };
   return (
     <div className={`containerRow ${styles.header}`}>
       <div className={styles.headeritleContainer}>
@@ -162,6 +166,17 @@ function Header({ hidden, title, filtrationList, from }) {
             >
               Task
             </Link>
+          </li>
+          <li className="nav-item pt-2  pr-4" style={{ listStyle: "none" }}>
+            <div
+              onClick={onLogout}
+              style={{ color: "#222f3e", fontWeight: "700" }}
+            >
+              <i
+                className={`fas fa-sign-out-alt fa-2x ${styles.logout} icon`}
+              ></i>
+              Log Out
+            </div>
           </li>
         </div>
       ) : null}

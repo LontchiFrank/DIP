@@ -17,6 +17,7 @@ import {
 } from "../../..//Helpers/userHelper";
 import { loadUser, updatedUserInfo } from "../../../redux/actions/userAction";
 import { Header2 } from "../../../components";
+import log1 from "../../../assets/defaultUserPic.webp";
 
 const defaultOptions = {
   loop: true,
@@ -103,7 +104,7 @@ function SuperProfile() {
                             ? URL.createObjectURL(selectedImage)
                             : user && user.user && user.user.avater
                             ? user.user.avater
-                            : "/defaultUserPic.webp"
+                            : log1
                         }
                         className="img-fluid rounded border card"
                         style={{ width: "100%", height: "100%" }}
@@ -151,7 +152,7 @@ function SuperProfile() {
                     name="email"
                     onChange={(e) => onchange(e)}
                     value={email}
-                    // disabled
+                    disabled
                   />
                 </Form.Group>
               </Row>

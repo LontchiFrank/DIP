@@ -29,7 +29,7 @@ function FetchAdmins() {
       return dispatch(superadminGetsAdmin(data));
     });
   }, []);
-
+  console.log(data);
   return (
     <div>
       {loading ? (
@@ -48,7 +48,7 @@ function FetchAdmins() {
             </div>
           ) : (
             <div>
-              {data > 0 ? (
+              {data.length > 0 ? (
                 data && data.map((data) => <AdminCard user={data} />)
               ) : (
                 <div className="containerColumn fw-bold ">

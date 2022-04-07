@@ -14,6 +14,7 @@ import {
 } from "../../../Helpers/adminHelper";
 import { _loadeCurrentlyLogedInUser } from "../../../Helpers/userHelper";
 import { loadUser } from "../../../redux/actions/userAction";
+import styles from "./AllUsers.module.css";
 
 function AllUsers() {
   const usersData = useSelector((state) => state.admin);
@@ -69,19 +70,19 @@ function AllUsers() {
       {error != null ? (
         <Unexpected />
       ) : (
-        <div>
+        <div className={`${styles.container}`}>
           {loading ? (
             <div className={`containerCenter spinnerContainer`}>
               <div className="spinner"></div>
             </div>
           ) : (
-            <div>
+            <div style={{ width: "100%" }}>
               {usersFilteredList.length > 0 ? (
                 <div>
-                  <div>
+                  <div style={{ width: "100%" }}>
                     {pendinDataSet.length > 0 &&
                       pendinDataSet.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PendingCard user={user} index={index} />
                         </div>
                       ))}
@@ -89,7 +90,7 @@ function AllUsers() {
                   <div>
                     {userDataSet.length > 0 &&
                       userDataSet.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PlanCard user={user} index={index} />
                         </div>
                       ))}
@@ -101,7 +102,7 @@ function AllUsers() {
                     {typeof incomingUsersRequest !== undefined &&
                       incomingUsersRequest.length > 0 &&
                       incomingUsersRequest.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PendingCard user={user} index={index} />
                         </div>
                       ))}
@@ -110,7 +111,7 @@ function AllUsers() {
                     {typeof users !== undefined &&
                       users.length > 0 &&
                       users.map((user, index) => (
-                        <div key={index}>
+                        <div style={{ width: "100%" }} key={index}>
                           <PlanCard user={user} />
                         </div>
                       ))}

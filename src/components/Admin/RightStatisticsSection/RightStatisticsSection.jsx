@@ -11,6 +11,7 @@ import { loadUser } from "../../../redux/actions/userAction";
 import { _getAllStatistics } from "../../../Helpers/adminHelper";
 import { _loadeCurrentlyLogedInUser } from "../../../Helpers/userHelper";
 import { useDispatch, useSelector } from "react-redux";
+import log from "../../../assets/defaultUserPic.webp";
 
 function RightStatisticsSection({ rightSide }) {
   const statisticsData = useSelector((state) => state.admin.statisticsData);
@@ -50,11 +51,7 @@ function RightStatisticsSection({ rightSide }) {
                 <span className="font-weight-bold"> {user && user.name}</span>
               </p>
               <Avater
-                imageUrl={
-                  user && user.avater !== ""
-                    ? user.avater
-                    : "/defaultUserPic.webp"
-                }
+                imageUrl={user && user.avater !== "" ? user.avater : log}
               />
             </div>
             <div className={styles.overViewC0ntainer}>

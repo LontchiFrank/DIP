@@ -52,17 +52,17 @@ function Task() {
       {error != null ? (
         <Unexpected />
       ) : (
-        <div>
+        <div style={{ width: "100%" }}>
           {loading ? (
             <div className={`containerCenter spinnerContainer`}>
               <div className="spinner"></div>
             </div>
           ) : (
-            <div>
+            <div style={{ width: "100%" }}>
               {holdTask.length > 0 ? (
-                <div>
+                <div style={{ width: "100%" }}>
                   {holdTask.map((book, index) => (
-                    <div key={index}>
+                    <div style={{ width: "100%" }} key={index}>
                       <TaskCard book={book} index={index} />
                     </div>
                   ))}

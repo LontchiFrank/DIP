@@ -4,6 +4,7 @@ import { ICON_DATA_SET } from "../../../SUPERDATA";
 import { Link, useLocation } from "react-router-dom";
 import { logout } from "../../../redux/actions/adminAction";
 import { useDispatch } from "react-redux";
+import head from "../../../assets/head.png";
 
 function SuperAdminLeftNavigation() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function SuperAdminLeftNavigation() {
   return (
     <div className={`containerColumn ${styles.container}`}>
       <div>
-        <img src="/logo_without_bg.png" width="70" alt="logo" />
+        <img src={head} width="70" alt="logo" />
       </div>
       <div className={`containerColumn ${styles.iconContainer}`}>
         {ICON_DATA_SET.map((icon, index) => (

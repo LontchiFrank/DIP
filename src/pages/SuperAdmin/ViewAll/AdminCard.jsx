@@ -10,6 +10,7 @@ import {
 import { _removeAdmin } from "../../../Helpers/superAdminHelper";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
+import jog from "../../../assets/Default-avatar.jpg";
 
 function AdminCard({ user }) {
   const userInfo = useSelector((state) => state.superAdmins);
@@ -72,11 +73,7 @@ function AdminCard({ user }) {
         <div className={`containerCenter ${styles.userInfoContainer}`}>
           <div>
             <Avater
-              imageUrl={
-                user.avater && user.avater != ""
-                  ? user.avater
-                  : "/Default-avatar.jpg"
-              }
+              imageUrl={user.avater && user.avater != "" ? user.avater : jog}
             />
           </div>
           <div className={styles.txtContainer}>

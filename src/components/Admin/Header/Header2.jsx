@@ -8,6 +8,7 @@ import {
   adminFilteredList,
 } from "../../../redux/actions/superAction";
 import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../../redux/actions/adminAction";
 
 function Header({
   hidden,
@@ -120,6 +121,9 @@ function Header({
   const handleDropdown = () => {
     setMenu(!menu);
   };
+  const onLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className={`containerRow ${styles.header}`}>
@@ -136,10 +140,7 @@ function Header({
         ></i>
       </div>
       {menu ? (
-        <div
-          className="container p-0"
-          style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
-        >
+        <div className="row" style={{ backgroundColor: "rgba(0,0,0,0.3)" }}>
           <li className="nav-item pt-2  pr-4" style={{ listStyle: "none" }}>
             <Link
               to="/all-admins-users"
@@ -189,6 +190,18 @@ function Header({
             >
               Profile
             </Link>
+          </li>
+
+          <li className="nav-item pt-2  pr-4" style={{ listStyle: "none" }}>
+            <div
+              onClick={onLogout}
+              style={{ color: "#222f3e", fontWeight: "700" }}
+            >
+              <i
+                className={`fas fa-sign-out-alt fa-2x ${styles.logout} icon`}
+              ></i>
+              Log Out
+            </div>
           </li>
         </div>
       ) : null}

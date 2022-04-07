@@ -50,8 +50,9 @@
 
 @media (max-width: 500px) {
   .children {
-    margin-left: 10px;
+    margin-left: 0px;
     margin-right: 0px;
-    padding: 14px 20px;
+    padding: 28px 20px;
+    width: 100%;
   }
 }
