@@ -170,7 +170,7 @@ function Profile() {
                     name="email"
                     onChange={(e) => onchange(e)}
                     value={email}
-                    // disabled
+                    disabled
                   />
                 </Form.Group>
               </Row>
@@ -180,7 +180,8 @@ function Profile() {
                   <Form.Control
                     required
                     type="text"
-                    // value={user.user.role}
+                    value={user.user.role}
+                    disabled
                   />
                 </Form.Group>
                 <Row className=" pt-3">

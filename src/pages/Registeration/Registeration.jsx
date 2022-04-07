@@ -10,6 +10,7 @@ import { Offline, Online } from "react-detect-offline";
 import Network from "../../components/Network/Network";
 import animationData from "../../annimations/5449-success-tick.json";
 import Lottie from "react-lottie";
+import read1 from "../../assets/5.png";
 
 const defaultOptions = {
   loop: true,
@@ -293,11 +294,7 @@ function Registeration() {
         </div>
         <div className={`${styles.firstPart} col-lg-6`}>
           <div className={styles.part}>
-            <img
-              src="/5.png"
-              alt=""
-              style={{ width: "100%", height: "100%" }}
-            />
+            <img src={read1} alt="" style={{ width: "100%", height: "100%" }} />
             <h4
               style={{
                 textAlign: "center",
