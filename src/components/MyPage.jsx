@@ -94,13 +94,13 @@ function MyPage({ children }) {
                     <a class="dropdown-item" href="#">
                       Institute Background &raquo;
                     </a>
-                    <ul class="dropdown-menu dropdown-submenu">
+                    {/* <ul class="dropdown-menu dropdown-submenu">
                       <li>
                         <a class="dropdown-item" href="#">
                           Submenu item 1
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
@@ -205,7 +205,7 @@ function MyPage({ children }) {
                 </Link>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   to="/"
                   className="nav-link actived"
@@ -214,7 +214,7 @@ function MyPage({ children }) {
                 >
                   Contact
                 </Link>
-              </li>
+              </li> */}
               <div className="d-flex" style={{ gap: "6px " }}>
                 <button
                   type="button"

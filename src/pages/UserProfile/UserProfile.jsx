@@ -199,6 +199,7 @@ function UserProfile() {
                   <Form.Select
                     aria-label="Default select example"
                     // onChange={(e) => handleSelectFreeOrPremium(e)}
+                    disabled
                   >
                     <option value="1">Admin</option>
                     {/* <option value="2">Premium</option> */}

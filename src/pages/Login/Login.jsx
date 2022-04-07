@@ -61,20 +61,25 @@ function Login() {
     const data = { email, password };
 
     login(data).then((response) => {
-      if (response.code == 400) {
-        setIsLoading(false);
+      try {
+        if (response.code == 400) {
+          setIsLoading(false);
 
-        setErrMsg("Account Doesn't Exist or Invalid Credentials");
-        // console.log(response, "error");
-      } else if (response.code == 500) {
-        setErrMsg(
-          "Oops someting went wrong with our server, please try again later "
-        );
-      } else {
-        setIsLoading(false);
-        setModalShow(true);
-        dispatch(loginUser(response));
-        _loadeCurrentlyLogedInUser().then((data) => dispatch(loadUser(data)));
+          setErrMsg("Account Doesn't Exist or Invalid Credentials");
+          // console.log(response, "error");
+        } else if (response.code == 500) {
+          setErrMsg(
+            "Oops someting went wrong with our server, please refresh and try again later "
+          );
+        } else {
+          setIsLoading(false);
+          setModalShow(true);
+          dispatch(loginUser(response));
+          _loadeCurrentlyLogedInUser().then((data) => dispatch(loadUser(data)));
+        }
+      } catch (error) {
+        console.log("hey");
+        setErrMsg("Network Error, Please Verify your Connection");
       }
 
       console.log(response);
